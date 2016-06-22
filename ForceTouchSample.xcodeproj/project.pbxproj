@@ -12,6 +12,7 @@
 		5B656F5D1D1A828F005DC5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B656F5B1D1A828F005DC5A2 /* Main.storyboard */; };
 		5B656F5F1D1A828F005DC5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B656F5E1D1A828F005DC5A2 /* Assets.xcassets */; };
 		5B656F621D1A828F005DC5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B656F601D1A828F005DC5A2 /* LaunchScreen.storyboard */; };
+		5BC43F661D1ABF1900E3BF3B /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC43F651D1ABF1900E3BF3B /* NextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5B656F5E1D1A828F005DC5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B656F611D1A828F005DC5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B656F631D1A828F005DC5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BC43F651D1ABF1900E3BF3B /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				5B656F571D1A828F005DC5A2 /* AppDelegate.swift */,
 				5B656F591D1A828F005DC5A2 /* ViewController.swift */,
+				5BC43F651D1ABF1900E3BF3B /* NextViewController.swift */,
 				5B656F5B1D1A828F005DC5A2 /* Main.storyboard */,
 				5B656F5E1D1A828F005DC5A2 /* Assets.xcassets */,
 				5B656F601D1A828F005DC5A2 /* LaunchScreen.storyboard */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					5B656F531D1A828F005DC5A2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P98QWW6UXS;
 					};
 				};
 			};
@@ -136,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B656F5A1D1A828F005DC5A2 /* ViewController.swift in Sources */,
+				5BC43F661D1ABF1900E3BF3B /* NextViewController.swift in Sources */,
 				5B656F581D1A828F005DC5A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,10 +254,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ForceTouchSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tchiba.ForceTouchSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +268,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ForceTouchSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tchiba.ForceTouchSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +297,7 @@
 				5B656F681D1A828F005DC5A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

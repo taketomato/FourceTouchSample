@@ -16,9 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let icon = UIApplicationShortcutIcon(type: .Alarm)
-        let item = UIApplicationShortcutItem(type: "next", localizedTitle: "コードで実装したよ",localizedSubtitle: "下に出てくる文字", icon: icon, userInfo: nil)
+        let item = UIApplicationShortcutItem(type: "next",
+                                             localizedTitle: "コードで実装したよ",
+                                             localizedSubtitle: "下に出てくる文字",
+                                             icon: icon,
+                                             userInfo: nil)
         UIApplication.sharedApplication().shortcutItems = [item]
-        // Override point for customization after application launch.
         return true
     }
 
@@ -48,19 +51,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
         print("Launch By Shortcut!!")
 
-
         print(shortcutItem.type)
         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
         if shortcutItem.type == "next" {
             let vc = storyBoard.instantiateViewControllerWithIdentifier("NextViewControllerID")
-            print(vc)
             window!.rootViewController?.presentViewController(vc, animated: true, completion: nil)
         } else if shortcutItem.type == "initial" {
             let vc = storyBoard.instantiateViewControllerWithIdentifier("navVC")
-            print(vc)
             window!.rootViewController?.presentViewController(vc, animated: true, completion: nil)
         }
 
+        // ショートカットからの起動が成功したかを渡す
         completionHandler(true)
     }
 }

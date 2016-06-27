@@ -1,6 +1,8 @@
 import UIKit
 
 class NextViewController: UIViewController {
+    
+    // previewAction を設定する
     override func previewActionItems() -> [UIPreviewActionItem] {
         // "UIPreviewAction"で処理を登録
         let action1 = UIPreviewAction(title: "アクション1",
